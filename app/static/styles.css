@@ -57,7 +57,7 @@ body {
     color: white;
 }
 #match h1 {
-    font-size: 100px;
+    font-size: 5vw;
 }
 
 #matchtime {
@@ -65,7 +65,27 @@ body {
 }
 
 #alliance {
-    margin-top: 200px;
+    margin-top: 560px;
+    position: absolute;
+    z-index: 100;
+}
+
+#getReady {
+    font-size: 4vw;
+    color: #42f486;
+    animation:blinkingText 0.9s infinite;
+}
+
+#timeremain {
+    font-size: 3.2vw;
+}
+
+@keyframes blinkingText{
+    0%{     color: #42f486;    }
+    49%{    color: transparent; }
+    50%{    color: transparent; }
+    99%{    color:transparent;  }
+    100%{   color: #42f486;    }
 }
 
 .arrow {

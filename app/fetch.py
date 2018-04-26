@@ -35,12 +35,12 @@ def fetch(team, event, token):
     teams = list(set([tm for alliance in teams for tm in alliance]))
     # Create a new hash to store data about the teams
     team_data = {}
-
+    
     # Fetch the data for each team
     for tm in teams:
         # Create a new element containing the data of this team
         # (Turn string form [i.e. 'frc1418'] into integer, i.e. 1418)
-        team_data[tm] = int(tba.team(tm).team_number)
+        team_data[tm] = tba.team(tm)
         print('Data fetched for team {team}.'.format(team=tm[3:]))
 
     print('Storing data...')
