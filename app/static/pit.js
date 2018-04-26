@@ -154,10 +154,8 @@ var x = setInterval(function() {
     var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
     var seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
-    ui.panels.match.timeremain.innerHTML = '<p style="font-size: 2vw">' + hours + "h "
+    ui.panels.match.timeremain.innerHTML = '<p style="font-size: 7.5vw; color: #f4425f">' + hours + "h "
         + minutes + "m " + seconds + "s " + '</p>';
-
-    var y;
 
     if (hours === 0 && minutes < 20) {
       ui.panels.match.getready.innerHTML = 'QUEUE UP';
@@ -174,6 +172,8 @@ var x = setInterval(function() {
 
     if (distance < 0) {
         ui.panels.match.getready.innerHTML = '';
-        ui.panels.match.timeremain.innerHTML = '<p style="color: #00afae;">' + 'TIME IS UP'  + '</p>';
+        currentMatch++;
+        grabMatch(currentMatch);
     }
+
 }, 1000);

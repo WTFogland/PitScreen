@@ -71,13 +71,13 @@ body {
 }
 
 #getReady {
-    font-size: 4vw;
+    font-size: 7vw;
     color: #42f486;
     animation:blinkingText 0.9s infinite;
 }
 
 #timeremain {
-    font-size: 3.2vw;
+    font-size: 7vw;
 }
 
 @keyframes blinkingText{
